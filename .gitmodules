@@ -1,0 +1,3 @@
+[submodule "ChappyEngine/vendors/spdlog"]
+	path = ChappyEngine/vendors/spdlog
+	url = https://github.com/gabime/spdlog
