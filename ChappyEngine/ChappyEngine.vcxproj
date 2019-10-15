@@ -147,6 +147,10 @@
     <ClInclude Include="src\ChappyEngine\Application.h" />
     <ClInclude Include="src\ChappyEngine\Core.h" />
     <ClInclude Include="src\ChappyEngine\EntryPoint.h" />
+    <ClInclude Include="src\ChappyEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\ChappyEngine\Events\Event.h" />
+    <ClInclude Include="src\ChappyEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\ChappyEngine\Log.h" />
   </ItemGroup>
   <ItemGroup>

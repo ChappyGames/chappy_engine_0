@@ -19,6 +19,10 @@
     <ClInclude Include="src\ChappyEngine\Log.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\ChappyEngine\Events\Event.h" />
+    <ClInclude Include="src\ChappyEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ChappyEngine\Application.cpp">
