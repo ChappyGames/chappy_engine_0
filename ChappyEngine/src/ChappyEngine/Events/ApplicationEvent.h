@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace ChappyEngine {
 
 	class CHAPPY_API WindowResizeEvent : public Event {
@@ -19,7 +17,7 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(WINDOW_RESIZE)
+		EVENT_CLASS_TYPE(EVENT_TYPE_WINDOW_RESIZE)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
 	private:
 		unsigned int width;
@@ -30,7 +28,7 @@ namespace ChappyEngine {
 	public:
 		WindowCloseEvent() {}
 
-		EVENT_CLASS_TYPE(WINDOW_CLOSE)
+		EVENT_CLASS_TYPE(EVENT_TYPE_WINDOW_CLOSE)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
 	};
 
@@ -38,7 +36,7 @@ namespace ChappyEngine {
 	public:
 		AppTickEvent() {}
 
-		EVENT_CLASS_TYPE(APP_TICK)
+		EVENT_CLASS_TYPE(EVENT_TYPE_APP_TICK)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
 	};
 
@@ -46,7 +44,7 @@ namespace ChappyEngine {
 	public:
 		AppUpdateEvent() {}
 
-		EVENT_CLASS_TYPE(APP_UPDATE)
+		EVENT_CLASS_TYPE(EVENT_TYPE_APP_UPDATE)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
 	};
 
@@ -54,7 +52,7 @@ namespace ChappyEngine {
 	public:
 		AppRenderEvent() {}
 
-		EVENT_CLASS_TYPE(APP_RENDER)
+		EVENT_CLASS_TYPE(EVENT_TYPE_APP_RENDER)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
 	};
 }

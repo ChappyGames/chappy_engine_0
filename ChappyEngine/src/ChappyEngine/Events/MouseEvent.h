@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace ChappyEngine {
 
 	class CHAPPY_API MouseMovedEvent : public Event {
@@ -19,7 +17,7 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(MOUSE_MOVED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_MOUSE_MOVED)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_MOUSE | EVENT_CATEGORY_INPUT)
 
 	private:
@@ -40,7 +38,7 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(MOUSE_SCROLLED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_MOUSE_SCROLLED)
 		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_MOUSE | EVENT_CATEGORY_INPUT)
 
 	private:
@@ -69,7 +67,7 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(MOUSE_BUTTON_PRESSED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_MOUSE_BUTTON_PRESSED)
 	};
 
 	class CHAPPY_API MouseButtonReleasedEvent : public MouseButtonEvent {
@@ -82,6 +80,6 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(MOUSE_BUTTON_RELEASED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_MOUSE_BUTTON_RELEASED)
 	};
 }

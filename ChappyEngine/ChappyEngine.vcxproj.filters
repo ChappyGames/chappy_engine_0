@@ -4,6 +4,9 @@
     <Filter Include="ChappyEngine">
       <UniqueIdentifier>{00E2783C-EC44-08E1-95CA-4097810CD463}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ChappyEngine\Events">
+      <UniqueIdentifier>{E44DDC6E-50AF-B97C-D91C-002F457DF03B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ChappyEngine.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\ChappyEngine\EntryPoint.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Events\ApplicationEvent.h">
+      <Filter>ChappyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Events\Event.h">
+      <Filter>ChappyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Events\KeyEvent.h">
+      <Filter>ChappyEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h">
+      <Filter>ChappyEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\ChappyEngine\Log.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\ChappyEngine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\ChappyEngine\Events\Event.h" />
-    <ClInclude Include="src\ChappyEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\cepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ChappyEngine\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\ChappyEngine\Log.cpp">
       <Filter>ChappyEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\cepch.cpp" />
   </ItemGroup>
 </Project>

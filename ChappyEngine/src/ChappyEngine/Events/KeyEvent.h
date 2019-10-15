@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace ChappyEngine {
 
 	class CHAPPY_API KeyEvent : public Event {
@@ -31,7 +29,7 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(KEY_PRESSED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_KEY_PRESSED)
 
 	private:
 		int repeatCount;
@@ -47,6 +45,6 @@ namespace ChappyEngine {
 			return lSS.str();
 		}
 
-		EVENT_CLASS_TYPE(KEY_RELEASED)
+		EVENT_CLASS_TYPE(EVENT_TYPE_KEY_RELEASED)
 	};
 }
