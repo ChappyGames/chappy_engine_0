@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../Core.h"
+#include "ChappyEngine\Core.h"
+
+#include <string>
+#include <functional>
 
 namespace ChappyEngine {
 

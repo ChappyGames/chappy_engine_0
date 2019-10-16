@@ -8,6 +8,12 @@ workspace "ChappyEngine"
 	}
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "ChappyEngine/vendors/GLFW/include"
+
+include "ChappyEngine/vendors/GLFW"
 	
 project "ChappyEngine"
 	location "ChappyEngine"
@@ -27,8 +33,14 @@ project "ChappyEngine"
 	}
 	
 	includedirs {
-		"{prj.name}/src",
-		"%{prj.name}/vendors/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendors/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"

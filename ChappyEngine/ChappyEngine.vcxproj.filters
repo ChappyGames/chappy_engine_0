@@ -7,6 +7,12 @@
     <Filter Include="ChappyEngine\Events">
       <UniqueIdentifier>{E44DDC6E-50AF-B97C-D91C-002F457DF03B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ChappyEngine\Platform">
+      <UniqueIdentifier>{545E45B3-C0CA-00AE-89BE-980BF5E92216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChappyEngine\Platform\Windows">
+      <UniqueIdentifier>{8E1CA698-FA34-8DC2-C3E1-1C5C2FB9215C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ChappyEngine.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\ChappyEngine\Log.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Platform\Windows\WindowsWindow.h">
+      <Filter>ChappyEngine\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Window.h">
+      <Filter>ChappyEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\cepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\ChappyEngine\Log.cpp">
       <Filter>ChappyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChappyEngine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>ChappyEngine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cepch.cpp" />
   </ItemGroup>

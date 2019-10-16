@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Core.h"
+#include "Events\Event.h"
+#include "Window.h"
 
 namespace ChappyEngine {
 
@@ -11,6 +13,10 @@ namespace ChappyEngine {
 		virtual ~Application();
 
 		void Run();
+
+	private:
+		std::unique_ptr<Window> window;
+		bool running = true;
 	};
 
 	// TO BE DEFINED IN CLIENT
