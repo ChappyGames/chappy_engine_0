@@ -1,6 +1,3 @@
 [submodule "ChappyEngine/vendors/spdlog"]
 	path = ChappyEngine/vendors/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "ChappyEngine/vendors/GLFW"]
-	path = ChappyEngine/vendors/GLFW
-	url = https://github.com/ChappyGames/glfw
