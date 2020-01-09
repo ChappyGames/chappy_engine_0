@@ -25,9 +25,9 @@ namespace ChappyEngine {
 		float mouseY;
 	};
 
-	class CHAPPY_API MouseScrolledEvent : Event {
+	class CHAPPY_API MouseScrolledEvent : public Event {
 	public:
-		MouseScrolledEvent(float aOffsetX, float aOffsetY) : offsetX(aOffsetX), offsetY(offsetY) {}
+		MouseScrolledEvent(float aOffsetX, float aOffsetY) : offsetX(aOffsetX), offsetY(aOffsetY) {}
 
 		inline float GetXOffset() const { return offsetX; }
 		inline float GetYOffset() const { return offsetY; }
@@ -46,7 +46,7 @@ namespace ChappyEngine {
 		float offsetY;
 	};
 
-	class CHAPPY_API MouseButtonEvent : Event {
+	class CHAPPY_API MouseButtonEvent : public Event {
 	public:
 		inline int GetMouseButton() const { return button; }
 
@@ -59,7 +59,7 @@ namespace ChappyEngine {
 
 	class CHAPPY_API MouseButtonPressedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonPressedEvent(int aButton) : MouseButtonEvent(button) {}
+		MouseButtonPressedEvent(int aButton) : MouseButtonEvent(aButton) {}
 
 		std::string ToString() const override {
 			std::stringstream lSS;
@@ -72,7 +72,7 @@ namespace ChappyEngine {
 
 	class CHAPPY_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonReleasedEvent(int aButton) : MouseButtonEvent(button) {}
+		MouseButtonReleasedEvent(int aButton) : MouseButtonEvent(aButton) {}
 
 		std::string ToString() const override {
 			std::stringstream lSS;

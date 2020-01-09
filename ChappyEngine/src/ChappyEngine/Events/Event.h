@@ -61,7 +61,7 @@ namespace ChappyEngine {
 		template<typename T>
 		bool Dispatch(EventFn<T> aFunc) {
 			if (event.GetEventType() == T::GetStaticType()) {
-				event.handled = func(*(T*)&event);
+				event.handled = aFunc(*(T*)&event);
 				return true;
 			}
 			return false;

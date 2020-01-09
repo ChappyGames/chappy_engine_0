@@ -1,6 +1,10 @@
 #pragma once
 
+#include "Core.h"
 #include "Event.h"
+#include "ChappyEngine/Events/ApplicationEvent.h"
+
+#include "Window.h"
 
 namespace ChappyEngine {
 
