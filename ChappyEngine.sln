@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 16
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChappyEngine", "ChappyEngine\ChappyEngine.vcxproj", "{00E2783C-EC44-08E1-95CA-4097810CD463}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "ChappyEngine\vendors\GLFW\GLFW.vcxproj", "{154B857C-0182-860D-AA6E-6C109684020F}"
