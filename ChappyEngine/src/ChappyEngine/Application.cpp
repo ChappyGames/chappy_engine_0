@@ -29,6 +29,10 @@ namespace ChappyEngine {
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			for (Layer* layer : layerStack) {
+				layer->OnUpdate();
+			}
+
 			window->OnUpdate();
 		}
 	}
@@ -39,6 +43,21 @@ namespace ChappyEngine {
 		lDispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
 
 		CE_CORE_TRACE("{0}", e);
+
+		for (auto i = layerStack.end(); i != layerStack.begin();) {
+			(*--i)->OnEvent(e);
+			if (e.Handled()) {
+				break;
+			}
+		}
+	}
+
+	void Application::PushLayer(Layer* aLayer) {
+		layerStack.PushLayer(aLayer);
+	}
+
+	void Application::PushOverlay(Layer* aLayer) {
+		layerStack.PushOverlay(aLayer);
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e) {

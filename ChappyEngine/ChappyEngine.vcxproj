@@ -80,10 +80,11 @@
       <PrecompiledHeaderFile>cepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CE_PLATFORM_WINDOWS;CE_BUILD_DLL;CE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;src\ChappyEngine;vendors\spdlog\include;vendors\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendors\spdlog\include;vendors\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,6 +160,8 @@
     <ClInclude Include="src\ChappyEngine\Events\Event.h" />
     <ClInclude Include="src\ChappyEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\ChappyEngine\Layer.h" />
+    <ClInclude Include="src\ChappyEngine\LayerStack.h" />
     <ClInclude Include="src\ChappyEngine\Log.h" />
     <ClInclude Include="src\ChappyEngine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\ChappyEngine\Window.h" />
@@ -164,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ChappyEngine\Application.cpp" />
+    <ClCompile Include="src\ChappyEngine\Layer.cpp" />
+    <ClCompile Include="src\ChappyEngine\LayerStack.cpp" />
     <ClCompile Include="src\ChappyEngine\Log.cpp" />
     <ClCompile Include="src\ChappyEngine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\cepch.cpp">

@@ -4,6 +4,8 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 #include "Window.h"
+#include "ChappyEngine/LayerStack.h"
+
 
 namespace ChappyEngine {
 
@@ -17,11 +19,15 @@ namespace ChappyEngine {
 
 		void OnEvent(Event& e);
 
+		void PushLayer(Layer* aLayer);
+		void PushOverlay(Layer* aLayer);
+
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> window;
 		bool running = true;
+		LayerStack layerStack;
 	};
 
 	// TO BE DEFINED IN CLIENT

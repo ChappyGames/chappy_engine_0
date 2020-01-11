@@ -37,6 +37,12 @@
     <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h">
       <Filter>ChappyEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Layer.h">
+      <Filter>ChappyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\LayerStack.h">
+      <Filter>ChappyEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\ChappyEngine\Log.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ChappyEngine\Application.cpp">
+      <Filter>ChappyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChappyEngine\Layer.cpp">
+      <Filter>ChappyEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChappyEngine\LayerStack.cpp">
       <Filter>ChappyEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\ChappyEngine\Log.cpp">
