@@ -12,9 +12,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "ChappyEngine/vendors/GLFW/include"
+IncludeDir["GLAD"] = "ChappyEngine/vendors/GLAD/include"
 
 include "ChappyEngine/vendors/GLFW"
-	
+include "ChappyEngine/vendors/GLAD"
+
 project "ChappyEngine"
 	location "ChappyEngine"
 	kind "SharedLib"
@@ -35,11 +37,14 @@ project "ChappyEngine"
 	includedirs {
 		"%{prj.name}/src",
 		"%{prj.name}/vendors/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
+
 	}
 	
 	links {
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 	
@@ -50,7 +55,8 @@ project "ChappyEngine"
 		
 		defines {
 			"CE_PLATFORM_WINDOWS",
-			"CE_BUILD_DLL"
+			"CE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands {

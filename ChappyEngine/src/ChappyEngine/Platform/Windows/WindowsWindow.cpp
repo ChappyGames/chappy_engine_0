@@ -5,6 +5,9 @@
 #include "ChappyEngine/Events/MouseEvent.h";
 #include "ChappyEngine/Events/KeyEvent.h";
 
+#include <GLFW/glfw3.h>
+#include <glad/glad.h>
+
 namespace ChappyEngine {
 
 	static bool GLFWInitialized = false;
@@ -44,6 +47,8 @@ namespace ChappyEngine {
 
 		window = glfwCreateWindow((int)aProps.width, (int)aProps.height, data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(window);
+		int lStatus = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		CE_CORE_ASSERT(lStatus, "Failed to initialize GLAD!");
 		glfwSetWindowUserPointer(window, &data);
 		SetVSync(true);
 
