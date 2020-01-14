@@ -7,8 +7,14 @@
     <Filter Include="ChappyEngine\Events">
       <UniqueIdentifier>{E44DDC6E-50AF-B97C-D91C-002F457DF03B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ChappyEngine\ImGui">
+      <UniqueIdentifier>{2AD72213-16BB-E368-7F1B-DEBB6B1ECEEA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ChappyEngine\Platform">
       <UniqueIdentifier>{545E45B3-C0CA-00AE-89BE-980BF5E92216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChappyEngine\Platform\OpenGL">
+      <UniqueIdentifier>{0821C647-F4DB-B5F3-9D93-2E3E892D0084}</UniqueIdentifier>
     </Filter>
     <Filter Include="ChappyEngine\Platform\Windows">
       <UniqueIdentifier>{8E1CA698-FA34-8DC2-C3E1-1C5C2FB9215C}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\ChappyEngine\Events\MouseEvent.h">
       <Filter>ChappyEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\ChappyEngine\ImGui\ImGuiLayer.h">
+      <Filter>ChappyEngine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\ChappyEngine\Layer.h">
       <Filter>ChappyEngine</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\ChappyEngine\Log.h">
       <Filter>ChappyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChappyEngine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>ChappyEngine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\ChappyEngine\Platform\Windows\WindowsWindow.h">
       <Filter>ChappyEngine\Platform\Windows</Filter>
@@ -67,9 +79,15 @@
     <ClCompile Include="src\ChappyEngine\Log.cpp">
       <Filter>ChappyEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\ChappyEngine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>ChappyEngine\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\ChappyEngine\Platform\Windows\WindowsWindow.cpp">
       <Filter>ChappyEngine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cepch.cpp" />
+    <ClCompile Include="src\ChappyEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>ChappyEngine\ImGui</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

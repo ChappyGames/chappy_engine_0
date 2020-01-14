@@ -18,6 +18,7 @@ class Sandbox : public ChappyEngine::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new ChappyEngine::ImGuiLayer());
 	}
 
 	~Sandbox() {

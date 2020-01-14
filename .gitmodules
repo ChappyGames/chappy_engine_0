@@ -4,3 +4,6 @@
 [submodule "ChappyEngine/vendors/GLFW"]
 	path = ChappyEngine/vendors/GLFW
 	url = https://github.com/ChappyGames/glfw
+[submodule "ChappyEngine/vendors/imgui"]
+	path = ChappyEngine/vendors/imgui
+	url = https://github.com/ChappyGames/imgui

@@ -22,12 +22,17 @@ namespace ChappyEngine {
 		void PushLayer(Layer* aLayer);
 		void PushOverlay(Layer* aLayer);
 
+		inline static Application& Get() { return *instance; }
+		inline Window& GetWindow() { return *window; }
+
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> window;
 		bool running = true;
 		LayerStack layerStack;
+
+		static Application* instance;
 	};
 
 	// TO BE DEFINED IN CLIENT
