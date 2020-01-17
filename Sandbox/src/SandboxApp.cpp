@@ -5,7 +5,7 @@ public:
 	ExampleLayer() : Layer("Example") {}
 
 	void OnUpdate() override {
-		CE_INFO("ExampleLayer::Update");
+		//CE_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(ChappyEngine::Event& aEvent) override {

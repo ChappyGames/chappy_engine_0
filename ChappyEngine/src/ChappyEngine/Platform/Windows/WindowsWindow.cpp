@@ -94,6 +94,12 @@ namespace ChappyEngine {
 			}
 		});
 
+		glfwSetCharCallback(window, [](GLFWwindow* aWindow, unsigned int aKeycode) {
+			WindowData& lData = *(WindowData*)glfwGetWindowUserPointer(aWindow);
+			KeyTypedEvent lEvent(aKeycode);
+			lData.eventCallback(lEvent);
+		});
+
 		glfwSetMouseButtonCallback(window, [](GLFWwindow* aWindow, int aButton, int aAction, int aMods) {
 			WindowData& lData = *(WindowData*)glfwGetWindowUserPointer(aWindow);
 

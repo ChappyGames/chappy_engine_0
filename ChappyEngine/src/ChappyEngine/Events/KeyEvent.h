@@ -47,4 +47,20 @@ namespace ChappyEngine {
 
 		EVENT_CLASS_TYPE(EVENT_TYPE_KEY_RELEASED)
 	};
+
+	class CHAPPY_API KeyTypedEvent : public KeyEvent {
+	public:
+		KeyTypedEvent(int aKeyCode)
+			: KeyEvent(aKeyCode) {}
+
+		std::string ToString() const override {
+			std::stringstream lSS;
+			lSS << "KeyTypedEvent: " << keyCode;
+			return lSS.str();
+		}
+
+		EVENT_CLASS_TYPE(EVENT_TYPE_KEY_TYPED)
+
+	private:
+	};
 }
